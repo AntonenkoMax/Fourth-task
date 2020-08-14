@@ -1,0 +1,67 @@
+.accordoin__title{
+	background-color: orange;
+	border: 1px solid black;
+	border-radius: 15px;
+	padding: 0 20px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.accordoin__title.active,
+.accordoin__title:hover{
+	background-color: orangered;
+}
+.accordion__cont{
+	background-color: #efd7678c;
+	border: 1px solid black;
+	border-radius: 15px;
+	padding: 0 15px;
+	display: none;
+}
+.accordion__cont.show{
+	display: block;
+}
+
+
+/* переключатель */
+.switch__label{
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+.switch__label input{
+	display: none;
+}
+.switch__label__slider{
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+.switch__label__slider:before{
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+#interface:checked + .switch__label__slider {
+	background-color: #2196F3;
+}
+#interface:focus + .switch__label__slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+#interface:checked + .switch__label__slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
